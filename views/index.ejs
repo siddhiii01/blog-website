@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/index.css">
+  <title>All Blog</title>
+</head>
+<body>  
+      <section class="hero">
+          <h1>Create a blog worth sharing</h1>
+          <p>Get a full suite of intuitive design features and powerful marketing tools to create a unique blog.</p>
+          <a href="http://localhost:8080/post/create"><button>Create Blog</button></a> 
+      </section>
+  
+      <div class="image-container">
+          <img src="/images/posterBLog.png" class="image1">
+      </div>
+
+   <div class="blog-container">
+    <% for(post of posts){ %>
+      <div class="blog-card">
+        <img src="<%= post.image %>" alt="Blog Image">
+        <h2 class="heading"><%= post.heading %></h2>
+        <p class="author">By <%= post.author %></p>
+        <p class="content"><%= post.content.substring(0, 100) %>...</p>
+        <a href="/post/<%= post.id %>" class="read-more">Read More</a>
+      </div>  
+    <% } %>
+  </div>
+</body>
+</html>

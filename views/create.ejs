@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/create.css">
+  <title>Create New Blog</title>
+
+</head>
+<body>
+  <div class="container">
+    <h1>Create a New Blog Post</h1>
+    <form method= "post" action="/post">
+      <label for="imageURL">Image URL: </label>
+      <input name= "image" type="text" id="imageURL" placeholder="Enter image URL here.." oninput="displayImage()">
+      
+      <label for="heading">Blog Title: </label>
+      <input name = "heading" type="text" id="heading" placeholder="Enter your BLOG Title">
+
+      <label for="author">Author Name: </label>
+      <input name= "author" type="text" id="author" placeholder="Enter Author Name">
+
+      <label for="content">Content: </label>
+      <textarea  name="content" id="content"  rows="10" placeholder="Write your BLOG content here..."></textarea>
+
+      <div class="image-preview" id="imagePreview">
+        <img id= "outputImage">
+      </div>
+      
+      <button>Submit Post</button>
+    </form>
+  </div>
+
+   <script>
+    function displayImage() {
+      let url = document.getElementById("imageURL").value;
+      let imageElement = document.getElementById("outputImage");
+      
+      if(url) {
+        imageElement.src = url;
+        imageElement.style.display ="block"
+      } else {
+        imageElement.style.display ="none"
+      }
+    }
+    
+  </script>
+</body>
+</html>

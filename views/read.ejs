@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Read More</title>
+  <link rel="stylesheet" href="/styles/read.css">
+</head>
+<body>
+  <div class="blog-card">
+    <img src="<%= post.image %>">
+  </div>
+  <div class="blog-content">
+    <h5 class="tip">INDIA TRAVEL TIPS</h5>
+    <h2 class="heading"><%= post.heading %></h2>
+    <p class="author"><%= post.author %></p>
+    <p class="content"><%- post.content %></p>
+  </div>
+ 
+  <div class="footer">
+    <p>Follow us on:</p>
+    <a href="https://www.facebook.com/groups/category/travel/"><span class="social-link facebook">Facebook</span></a>
+    <a href="https://x.com/TravelLeisure"><span class="social-link twitter">Twitter</span></a>
+    <a href="https://www.instagram.com/travelandleisure/?hl=en"><span class="social-link instagram">Instagram</span></a>
+  </div>
+</body>
+</html>
+
